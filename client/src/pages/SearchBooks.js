@@ -69,8 +69,8 @@ const SearchBooks = () => {
     }
 
     try {
-      await saveBookGraphQL({
-        variables: { id: userId, content: bookToSave }
+      await saveBook({
+        variables: { book: bookToSave }
       });
 
       // if book successfully saves to user's account, save book id to state
